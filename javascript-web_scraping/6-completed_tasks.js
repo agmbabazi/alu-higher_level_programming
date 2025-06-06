@@ -9,7 +9,7 @@ request(apiUrl, function (error, response, body) {
     const todos = JSON.parse(body);
     const completedTasks = {};
 
-    for (let task of todos) {
+    for (const task of todos) {
       if (task.completed) {
         if (completedTasks[task.userId]) {
           completedTasks[task.userId]++;

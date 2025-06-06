@@ -9,8 +9,8 @@ request(apiUrl, function (error, response, body) {
     const data = JSON.parse(body).results;
     let count = 0;
 
-    for (let film of data) {
-      for (let character of film.characters) {
+    for (const film of data) {
+      for (const character of film.characters) {
         if (character.includes('/18/')) {
           count++;
           break;
